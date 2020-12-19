@@ -149,8 +149,10 @@ export default class TreeNode {
    * @param {number} parentGain - parent node gain or error.
    */
   train(X, y, currentDepth, parentGain) {
+    this.samples = X.rows;
+    this.calculatePrediction(y);
+
     if (X.rows <= this.minNumSamples) {
-      this.calculatePrediction(y);
       return;
     }
     if (parentGain === undefined) parentGain = 0.0;
@@ -194,8 +196,6 @@ export default class TreeNode {
         currentDepth + 1,
         this.gain,
       );
-    } else {
-      this.calculatePrediction(y);
     }
   }
 

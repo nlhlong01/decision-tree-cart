@@ -49,7 +49,7 @@ export function giniImpurity(array) {
  */
 export function getNumberOfClasses(array) {
   return array
-    .filter(function (val, i, arr) {
+    .filter(function(val, i, arr) {
       return arr.indexOf(val) === i;
     })
     .map((val) => val + 1)
