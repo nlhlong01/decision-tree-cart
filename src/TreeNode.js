@@ -150,6 +150,7 @@ export default class TreeNode {
    */
   train(X, y, currentDepth, parentGain) {
     this.samples = X.rows;
+    this.giniImpurity = Utils.giniImpurity(y);
     this.calculatePrediction(y);
 
     if (X.rows <= this.minNumSamples) {
