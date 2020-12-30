@@ -1,5 +1,5 @@
 {
-  "name": "ml-cart",
+  "name": "custom-ml-cart",
   "version": "2.0.2",
   "description": "CART decision tree algorithm",
   "main": "cart.js",
